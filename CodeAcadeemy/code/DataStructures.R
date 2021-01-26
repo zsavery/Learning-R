@@ -5,7 +5,7 @@
 ###
 
 # Vectors ######################################################################
-## c() ====
+## Using c() 
 ## In R, vectors are a list-like structure that contain items of the same data type.
 
 texas_cities <- c("Austin", "Abilene", "El Paso", "San Antonio", "Dallas", 
@@ -31,3 +31,35 @@ print(v)
 v <- seq(5, 9)
 v2 <- seq(5, 9, by = 0.4)
 
+## The logical and numeric values are converted to characters.  ----
+s <- c('apple','red',5,TRUE)
+print(s)
+
+# Accessing Vector Elements ####################################################
+# Using t[]
+# Accessing vector elements using position.
+t <- c("Sun","Mon","Tue","Wed","Thurs","Fri","Sat")
+u <- t[c(2,3,6)]
+print(u)
+
+# Accessing vector elements using logical indexing.
+v <- t[c(TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE)]
+print(v)
+
+# Accessing vector elements using negative indexing.
+x <- t[c(-2,-5)]
+print(x)
+
+# Accessing vector elements using 0/1 indexing.
+y <- t[c(0,0,0,0,0,0,1)]
+print(y)
+
+
+
+# CLEAN UP #####################################################################
+
+## Remove List =====
+rm(list = ls())
+
+## Clear Console ====
+cat('\014') # ctrl+L
